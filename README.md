@@ -1,16 +1,20 @@
 # login
+estoy trabajando con esta base de datos en mysql 
+create database UniversidadPrueba
 
-A new Flutter project.
+use UniversidadPrueba
 
-## Getting Started
+CREATE TABLE usuarios (
+    idUsuarios INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(50),
+    password VARCHAR(50)
+);
+INSERT INTO usuarios (email, password,nombre,apellidos, direccion, telefono) VALUES ('dirac@gmail.com', 'dirac', 'dirac','Ramos','jr arequipa',34343);
 
-This project is a starting point for a Flutter application.
+alter table usuarios  add column(nombre varchar(50))
+alter table usuarios  add column(apellidos varchar(50))
+alter table usuarios  add column(direccion varchar(50))
+alter table usuarios  add column(telefono int(10))
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+select *from usuarios
